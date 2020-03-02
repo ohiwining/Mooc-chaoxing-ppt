@@ -11,8 +11,7 @@ PAGES = 53
 Sender = "xxxx@163.com"  # 发邮件的地址
 passwd = "xxxx"  # 发送者邮件的授权密码
 SendTo = "xxxx@qq.com"#目标邮箱
-FirstPngUrl='''https://s3.ananas.chaoxing.com/doc/8d/32/59/a91d2205bb1400a3696c19763014d3e7/
-            thumb/1.png'''#网页上第一个ppt图片的链接
+FirstPngUrl='''https://s3.ananas.chaoxing.com/doc/8d/32/59/a91d2205bb1400a3696c19763014d3e7/thumb/1.png'''#网页上第一个ppt图片的链接
 
 def Crawler():
     for page in range(1, PAGES + 1):
@@ -50,22 +49,23 @@ def SendMail():
 def main():
     try:
         Crawler()
-        print("爬取图片成功")
+        print("爬取图片成功,图片保存到PPTPIC文件夹中")
     except:
         print("爬取图片失败")
         return
     try:
         GenerateDocx()
-        print("生成doc文件成功")
+        print("生成doc文件成功,文件保存在源码根目录")
     except:
         print("生成doc文件失败")
         return
     try:
         SendMail()
-        print("发送邮件成功")
+        print("发送邮件成功,请查收")
     except:
         print("发送邮件失败")
         return
 
 if __name__ == '__main__':
     main()
+    print("End.")
