@@ -1,7 +1,7 @@
 文件用于爬取日新学堂任务点中的ppt图片，并将图片添加到word文档中再发送至邮箱，通过邮箱可在任何设备上查看。
 
 环境要求：
-python 装有requests,python-docx包  可直接通过pip安装
+python 装有requests,python-docx包  可直接通过pip安装   除此之外py代码根目录新建一个名为PPTPIC的文件夹，用于存放ppt图片
 
 源码配置：
 PAGES = 53  ppt图片一共有多少页，直接通过ppt源网页查看
